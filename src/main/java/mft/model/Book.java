@@ -29,6 +29,9 @@ public class Book {
     @Column(name = "category", nullable = false)
     private String category;
 
+    @Column(nullable = false, unique = true)
+    private String isbn;
+
 
     @Column(name = "total_copies", nullable = false)
     private int totalCopies;
