@@ -8,6 +8,8 @@ import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 import mft.model.enums.Role;
 
+import java.io.Serializable;
+
 @Entity
 @Table(name = "users")
 @NoArgsConstructor
@@ -15,7 +17,7 @@ import mft.model.enums.Role;
 @Getter
 @Setter
 @ToString
-public class User {
+public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
